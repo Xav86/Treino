@@ -6,8 +6,22 @@
     <title>exercicio05</title>
 </head>
 <body>
-<h1>O programa vai pega o valor da casa, o salário do comprador e em quantos anos ele vai pagar. Calcule o valor  da prestação mensal, sabendo que ela não pode exceder 30% do salário ou então o empréstimo será negado.</h1>
+<?php
+    $valor = $_POST["valor"]??null;
+    $salario = $_POST["salario"]??null;
+    $anos = $_POST["anos"]??null;
+    if (isset($_POST["clear"]))
+    {
+        $valor = "";
+        $salario = "";
+        $anos = "";
+
+    }
+
+?>
+
     <form action="<?=$_SERVER["PHP_SELF"]?>" method="post">
+    <h1>O programa vai pega o valor da casa, o salário do comprador e em quantos anos ele vai pagar. Calcule o valor  da prestação mensal, sabendo que ela não pode exceder 30% do salário ou então o empréstimo será negado.</h1>
     <table>
         <tr>
             <td> Digite o valor da casa</td>
@@ -33,10 +47,10 @@
     <button type="submit" name="clear">Limpar</button>
 
     </form>
-    
 <?php
 if (isset($_POST["btn"]))
 {
+
     $valor = $_POST["valor"];
     $salario = $_POST["salario"];
     $novosalario = $salario*0.30;
@@ -46,7 +60,7 @@ if (isset($_POST["btn"]))
     {
         echo "preencha todos os campos";
     } else {
-        $prestacao = $valor/($anos/12);
+        $prestacao = $valor/($anos*12);
         if ($prestacao > $novosalario)
         {
             echo "O valor da prestação ($prestacao ao mês) excede 30% do seu salário ($novosalario) sendo então inviavel permitir a operação";
@@ -58,7 +72,7 @@ if (isset($_POST["btn"]))
         } else 
         {
             echo "Como chegastes aqui?";
-            
+
         }
     }
 }
