@@ -3,3 +3,5 @@ esse é um pequeno treino que estou fazendo. minha porfessora passou uma lista d
 
 segue print do nivel das questões
 ![Alt text](./assets/images/teste.png)
+
+nota: dei esse "treino" por finalizado, fiz de um jeito que funciona, mas provavelmente não é a melhor maneira de fazer.
