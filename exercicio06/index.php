@@ -45,7 +45,7 @@
     </form>
 
 <?php
-if (isset($_POST["btn"])) //falta corrigir o erro de não aceitar os numeros com virgua :( o qual causa outros problemas aparentemente...
+if (isset($_POST["btn"])) //se cololcar numero com , da problema tem q ser .
 {
 
     if (($altura == "") || ($peso == ""))

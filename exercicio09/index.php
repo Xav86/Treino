@@ -46,19 +46,20 @@ if (isset($_POST["btn"]))
        if ($n1 == $n2)
         {
            echo "os valores são iguais, não da pra conta assim patrão";
-        } else if ($n1 > $n2)
+        } else if ($n1 < $n2)
         {
             for ($i = $n1; $i <= $n2; $i++)
             {
-                echo $i;
+                echo "$i, ";
             }
-        } else if ($n1 < $n2)
+        } else if ($n1 > $n2)
         {
            for ($i = $n2; $i <= $n1; $i++)
             {
-               echo $i;
+               echo "$i, ";
             }
         }
+        echo "fim.";
     }      
 
 }
